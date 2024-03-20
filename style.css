@@ -324,19 +324,26 @@ body{
 }
 .try .container{
     display:  grid;
-    grid-template-columns: repeat(2 minmax(50% 1fr));
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,1fr);
     gap:  20px;
 }
 .try .container > div{
-    height: 320px;
     color: var(--main_bg_colr);
     text-transform: uppercase;
     font-weight: 600;
-    padding-top: 25px;
-    padding-left: 25px;
 }
 .try .container div p{
     font-family: var(--main_font);
+    grid-column: 3 / 4;
+    grid-row: 1;
+    /* font-size: 1.9em; */
+}
+.try .container div .p1{
+    font-family: var(--main_font);
+    grid-column:    3/ 4;
+    grid-row: 2;
+    /* font-size: 1.9em; */
 }
 .try .container div p:not(:first-of-type){
     font-size: 1.5em;
@@ -344,18 +351,27 @@ body{
 }
 .try .container .left{
     background-image: url(Sin-título-12.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    width: 650px;
-    height: 320px;
-    margin-left: 80px;
-    padding-top: 25px;
-    padding-left: 25px;
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+    /* width: 60em; */
+    height: 100%;
+    grid-column: 3/4;
+    grid-row: 2;
+    display: grid;
+    width: 50em;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 .try .container .rigth{
-    display:  grid;
-    grid-template-rows: repeat(2 minmax(50% 1fr));
-    gap:  10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    grid-column: 4/5;
+    grid-row: 2;
 }
 .try .container .rigth .top{
     background-image: url(Sin-título-13.png);
@@ -363,9 +379,6 @@ body{
     background-repeat: no-repeat;
     width: 650px;
     height: 160px;
-    margin-left: 780px;
-    padding-top: 25px;
-    padding-left: 25px;
 }
 .try .container .rigth .bottom{
     background-image: url(Sin-título-14.png);
@@ -373,9 +386,6 @@ body{
     background-repeat: no-repeat;
     width: 650px;
     height: 160px;
-    margin-left: 780px;
-    padding-top: 25px;
-    padding-left: 25px;
 }
 .booking{
     padding-top: 70px;
